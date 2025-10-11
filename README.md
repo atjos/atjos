@@ -11,7 +11,6 @@ Físico UIS 💪🏻<br>Trabajando con LaTeX y Python 🧑🏻‍💻
 <p align="center">
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmNneHFtOXp2MHBzMG54eG1ueG5pb3NsZnQ0aGd5cGV5eWllbGsxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jyDc9mR1kIlDW/giphy.gif" width="400">
 </p>
----
-[![](https://visitcount.itsvg.in/api?id=atjos&icon=0&color=0)](https://visitcount.itsvg.in)
+
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
