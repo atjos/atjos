@@ -1,3 +1,7 @@
+
+## Snake game con unas contribuciones:
+![snake gif](https://github.com/null3000/null3000/blob/output/github-contribution-grid-snake.svg)
+
 # 💫 About Me:
 Físico UIS 💪🏻<br>Trabajando con LaTeX y Python 🧑🏻‍💻
 
