@@ -26,6 +26,15 @@ Juan José Mendoza
 </p>
 
 
+### Software:
+
+<p>
+
+
+
+![icons8-git](https://user-images.githubusercontent.com/76852813/172722126-2495793f-c4f3-43cc-bfb2-14e1d6f4d3a2.svg)
+![icons8-visual-studio-code-2019](https://user-images.githubusercontent.com/76852813/172722742-4c84455a-830a-4f69-8dcd-ac9437e52251.svg)
+
 <p align="center">
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmNneHFtOXp2MHBzMG54eG1ueG5pb3NsZnQ0aGd5cGV5eWllbGsxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jyDc9mR1kIlDW/giphy.gif" width="400">
 </p>
