@@ -11,11 +11,18 @@ Juan José Mendoza
 
 
 
-## 🌐 Socials:
+## 🌐 Redes:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/juanjomendozac) [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/22416761) 
 
-# 💻 Tech Stack:
-![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+### 💻 Lenguajes:
+
+<p align="center">
+  <img width="48px" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/html.svg" alt="HTML" />
+  <img width="48px" src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/css.svg" alt="CSS" />
+  <img width="48px" src="https://user-images.githubusercontent.com/76852813/172720089-5ce0ea22-01c9-4444-8e70-a81501452b13.svg" alt="Python" />
+  <img width="48px" src="https://cdn.jsdelivr.net/gh/abrahamcalf/programming-languages-logos@main/src/latex/latex.svg" alt="LaTeX" />
+</p>
+
 
 <p align="center">
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmNneHFtOXp2MHBzMG54eG1ueG5pb3NsZnQ0aGd5cGV5eWllbGsxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jyDc9mR1kIlDW/giphy.gif" width="400">
