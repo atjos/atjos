@@ -33,7 +33,7 @@
  <img width="48px" src="https://user-images.githubusercontent.com/76852813/172722742-4c84455a-830a-4f69-8dcd-ac9437e52251.svg" />
 
 
-<br><br>
+<br>
 <p align="center">
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmNneHFtOXp2MHBzMG54eG1ueG5pb3NsZnQ0aGd5cGV5eWllbGsxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jyDc9mR1kIlDW/giphy.gif" width="400">
 </p>
