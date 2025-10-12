@@ -2,7 +2,8 @@
 ## Snake game con unas contribuciones:
 ![snake gif](https://github.com/null3000/null3000/blob/output/github-contribution-grid-snake.svg)
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?duration=4500&center=true&width=800&height=120&pause=1000&lines=Juan+José+Mendoza;Estudiante+de+Física+UIS;Proyecto:+Aprender+investigar+crear)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?duration=3500&center=true&width=650&lines=¡Hola!+Soy+Juan+José+Mendoza;Soy+de+Colombia;Soy+estudiante+de+Física;Soy+ATJOS;Y+futuro+Físico+UIS+💫)](https://git.io/typing-svg)
+
 
 
 ## 🌐 Socials:
