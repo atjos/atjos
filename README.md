@@ -2,7 +2,7 @@
 ![snake gif](https://github.com/null3000/null3000/blob/output/github-contribution-grid-snake.svg)
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?duration=4000&pause=1000&color=1E90FF&center=true&vCenter=true&width=800&lines=👋+Hola%2C+soy+Juan+José+Mendoza!;🇨🇴+Orgullosamente+colombiano;💡+Soy+atjos,+un+apasionado+por+el+conocimiento;🚀+Futuro+Físico+y+creador+de+ideas!" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?duration=4000&pause=1000&color=1E90FF&center=true&vCenter=true&width=800&lines=👋+Hola%2C+soy+Juan+José+Mendoza!" alt="Typing SVG" />
 </p>
 
 
