@@ -129,8 +129,8 @@ def build_svg(langs, current):
         c, t = typed("now", y, t + 0.2, "c3")
         parts.append(c)
         t += 0.3
-        rows = [("proyecto", current["name"], C_ACCENT, "bold"),
-                ("lenguaje", current["lang"], C_TEXT, "normal"),
+        rows = [("project", current["name"], C_ACCENT, "bold"),
+                ("lenguage", current["lang"], C_TEXT, "normal"),
                 ("commit", current["commit"], C_TEXT, "normal")]
         for label, value, color, weight in rows:
             y += LH
