@@ -131,7 +131,7 @@ def build_svg(langs, current):
         t += 0.3
         rows = [("project", current["name"], C_ACCENT, "bold"),
                 ("lenguage", current["lang"], C_TEXT, "normal"),
-                ("commit", current["commit"], C_TEXT, "normal")]
+                ("last-commit", current["commit"], C_TEXT, "normal")]
         for label, value, color, weight in rows:
             y += LH
             parts.append(fade(
