@@ -4,6 +4,8 @@ Me llamo [Juan José](https://github.com/atjos), soy estudiante de física y viv
 Soy un apasionado por la ciencia, la computación y la estrecha relación que lleva a ambas a ser una gran herramienta en el desarrollo de nuevas ideas.
 
 
-
-
-![snake gif](https://github.com/null3000/null3000/blob/output/github-contribution-grid-snake.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/atjos/atjos/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/atjos/atjos/output/github-snake.svg" />
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/atjos/atjos/output/github-snake.svg" />
+</picture>
