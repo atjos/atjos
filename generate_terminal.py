@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera terminal.svg: whoami + tus lenguajes más usados en GitHub."""
+"""Genera terminal.svg: whoami + lenguajes más usados + en qué estás trabajando ahora."""
 import json
 import os
 import urllib.request
@@ -12,8 +12,9 @@ OUTPUT = "terminal.svg"
 PROMPT_USER = "atjos"
 PROMPT_HOST = "tyrell"
 WHOAMI = "atjos"
-TOP_N = 4                      
-EXCLUDE = set()                
+TOP_N = 4
+EXCLUDE = set()
+MAX_CHARS = 62                 # largo máximo del texto de "now"
 
 BG, BAR_TOP, TRACK = "#021a2e", "#022b4a", "#053a63"
 C_TEXT, C_ACCENT, C_DIM, C_MUTED = "#a8d5e4", "#8cc1d9", "#4b94b2", "#2e6f98"
@@ -24,11 +25,18 @@ PROMPT_TXT = f"{PROMPT_USER}@{PROMPT_HOST}:~$ "
 
 GQL = """query($login:String!){user(login:$login){
   repositories(ownerAffiliations:OWNER,isFork:false,first:100,orderBy:{field:PUSHED_AT,direction:DESC}){
-    nodes{languages(first:10,orderBy:{field:SIZE,direction:DESC}){edges{size node{name}}}}}}}"""
+    nodes{name primaryLanguage{name}
+      defaultBranchRef{target{... on Commit{messageHeadline}}}
+      languages(first:10,orderBy:{field:SIZE,direction:DESC}){edges{size node{name}}}}}}}"""
 
 
-def fetch_langs():
-    totals = {}
+def cut(s, n=MAX_CHARS):
+    s = " ".join((s or "").split())
+    return s if len(s) <= n else s[:n - 1] + "…"
+
+
+def fetch_data():
+    totals, current = {}, None
     try:
         req = urllib.request.Request(
             "https://api.github.com/graphql",
@@ -37,17 +45,25 @@ def fetch_langs():
         with urllib.request.urlopen(req, timeout=30) as r:
             nodes = json.load(r)["data"]["user"]["repositories"]["nodes"]
         for repo in nodes:
+            # el repo de perfil se ignora: el propio workflow le hace commit
+            if current is None and repo["name"].lower() != USER.lower():
+                ref = repo.get("defaultBranchRef") or {}
+                current = {
+                    "name": repo["name"],
+                    "lang": (repo.get("primaryLanguage") or {}).get("name", "—"),
+                    "commit": (ref.get("target") or {}).get("messageHeadline", "—"),
+                }
             for e in repo["languages"]["edges"]:
                 name = e["node"]["name"]
                 if name not in EXCLUDE:
                     totals[name] = totals.get(name, 0) + e["size"]
     except Exception as ex:
-        print("No se pudieron leer los lenguajes:", ex)
-    if not totals:  
+        print("No se pudieron leer los datos:", ex)
+    if not totals:
         totals = {"Python": 60, "MATLAB": 25, "TeX": 15}
     total = sum(totals.values())
     ranked = sorted(totals.items(), key=lambda kv: kv[1], reverse=True)[:TOP_N]
-    return [(n, s * 100 / total) for n, s in ranked]
+    return [(n, s * 100 / total) for n, s in ranked], current
 
 
 def prompt_tspans():
@@ -75,7 +91,7 @@ def fade(inner, start, dur=0.25):
             f'dur="{dur}s" begin="{start:.2f}s" fill="freeze"/></g>')
 
 
-def build_svg(langs):
+def build_svg(langs, current):
     parts, y, t = [], 74, 0.5
 
     # whoami
@@ -107,6 +123,23 @@ def build_svg(langs):
         parts.append(fade(inner, t, 0.2))
         t += 0.25
 
+    # trabajando ahora
+    if current:
+        y += LH + 14
+        c, t = typed("now", y, t + 0.2, "c3")
+        parts.append(c)
+        t += 0.3
+        rows = [("proyecto", current["name"], C_ACCENT, "bold"),
+                ("lenguaje", current["lang"], C_TEXT, "normal"),
+                ("commit", current["commit"], C_TEXT, "normal")]
+        for label, value, color, weight in rows:
+            y += LH
+            parts.append(fade(
+                f'<text x="{X0}" y="{y}" fill="{C_MUTED}" xml:space="preserve">{label}</text>'
+                f'<text x="{bar_x}" y="{y}" fill="{color}" font-weight="{weight}" '
+                f'xml:space="preserve">{escape(cut(value))}</text>', t))
+            t += 0.2
+
     # prompt final con cursor parpadeando
     y += 40
     parts.append(fade(f'<text x="{X0}" y="{y}" xml:space="preserve">{prompt_tspans()}</text>', t))
@@ -135,6 +168,7 @@ def build_svg(langs):
 
 
 if __name__ == "__main__":
+    langs, current = fetch_data()
     with open(OUTPUT, "w", encoding="utf-8") as f:
-        f.write(build_svg(fetch_langs()))
+        f.write(build_svg(langs, current))
     print("Generado", OUTPUT)
